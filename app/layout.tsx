@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Funnel_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const funnelSans = Funnel_Sans({
+  variable: "--font-funnel-sans",
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -18,15 +20,15 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: '/og.png',
+        url: "/og.png",
         width: 1182,
         height: 763,
-        alt: 'Screen Pastel - Create Beautiful Screenshots',
+        alt: "Screen Pastel - Create Beautiful Screenshots",
       },
     ],
   },
   twitter: {
-    images: ['/og.png'],
+    images: ["/og.png"],
   },
 };
 
@@ -36,12 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistMono.variable} ${funnelSans.variable} antialiased`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

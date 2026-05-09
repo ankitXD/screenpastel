@@ -11,12 +11,23 @@ interface Background {
   value: string;
 }
 
+interface GradientStop {
+  id: string;
+  position: number;
+  color: string;
+  opacity: number;
+}
+
+interface GradientConfig {
+  direction: number;
+  stops: GradientStop[];
+}
+
 interface Theme {
   id: string;
   name: string;
-  color1: string;
-  color2: string;
   direction: number;
+  stops: GradientStop[];
 }
 
 interface ShadowLayer {
@@ -56,15 +67,29 @@ interface EditorState {
   };
   stack: StackConfig;
   frameDarkMode: boolean;
-  customGradient: {
-    color1: string;
-    color2: string;
-  };
-  gradientDirection: number;
+  gradient: GradientConfig;
   address: string;
   backgroundTintColor: string;
   backgroundTintOpacity: number;
   backgroundBlur: number;
+  positionX: number;
+  positionY: number;
+  aspectRatio: string;
+  flipX: boolean;
+  flipY: boolean;
+  perspective: number;
+  rotateX: number;
+  rotateY: number;
+  rotateZ: number;
 }
 
-export type { WindowFrame, Background, Theme, ShadowLayer, StackConfig, EditorState };
+export type {
+  WindowFrame,
+  Background,
+  GradientStop,
+  GradientConfig,
+  Theme,
+  ShadowLayer,
+  StackConfig,
+  EditorState,
+};
