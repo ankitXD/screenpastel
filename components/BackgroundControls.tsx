@@ -51,15 +51,24 @@ export default function BackgroundControls({
         const imageUrl = event.target?.result as string;
         commit((prev) => ({
           ...prev,
-          background: {
-            id: "custom-image",
-            name: "Custom Image",
-            type: "image",
-            value: `url(${imageUrl}) no-repeat center center / cover`,
-          },
+          image: imageUrl,
+          scale: 1,
+          rotation: 0,
+          positionX: 0,
+          positionY: 0,
+          aspectRatio: "auto",
+          flipX: false,
+          flipY: false,
+          perspective: 1000,
+          rotateX: 0,
+          rotateY: 0,
+          rotateZ: 0,
         }));
       };
       reader.readAsDataURL(file);
+    }
+    if (imageInputRef.current) {
+      imageInputRef.current.value = "";
     }
   };
 
