@@ -378,6 +378,7 @@ export default function ScreenshotEditor() {
       };
       reader.readAsDataURL(file);
     }
+    e.target.value = "";
   };
 
   const handlePaste = (e: ClipboardEvent) => {
@@ -1169,6 +1170,7 @@ export default function ScreenshotEditor() {
               onClick={() => {
                 resetHistory(mergeStateWithNewImage(state, null));
                 setShowConfirmDialog(false);
+                if (fileInputRef.current) fileInputRef.current.value = "";
               }}
             >
               Remove
