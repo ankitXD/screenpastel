@@ -36,6 +36,7 @@ import BorderControls from "../components/BorderControls";
 import CropTool from "../components/CropTool";
 import { FloatingToolbar } from "../components/FloatingToolbar";
 import ShadowControls from "../components/ShadowControls";
+import { ThemeToggle } from "../components/ThemeToggle";
 import TransformControls from "../components/TransformControls";
 import WindowControls from "../components/WindowControls";
 import WindowStackComponent from "../components/WindowStackComponent";
@@ -929,6 +930,8 @@ export default function ScreenshotEditor() {
                 <Download className="w-4 h-4" />
                 <span className="hidden sm:inline">Export</span>
               </Button>
+              <div className="h-4 w-px bg-border mx-0.5 sm:mx-1" />
+              <ThemeToggle />
             </div>
           </div>
         </header>

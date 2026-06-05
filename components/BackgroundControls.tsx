@@ -133,8 +133,8 @@ export default function BackgroundControls({
           onClick={() => imageInputRef.current?.click()}
           className={`relative flex items-center gap-3 p-2 rounded-lg border transition-all group w-full ${
             isSelected("custom-image")
-              ? "bg-white border-primary/50 shadow-sm"
-              : "bg-white/40 border-border/50 hover:bg-white/60 hover:border-border"
+              ? "bg-white dark:bg-accent border-primary/50 shadow-sm"
+              : "bg-white/40 dark:bg-accent/40 border-border/50 hover:bg-white/60 dark:hover:bg-accent/60 hover:border-border"
           }`}
         >
           <div className="w-10 h-10 rounded bg-accent/40 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/60 transition-colors">
@@ -290,8 +290,8 @@ export default function BackgroundControls({
             <div
               className={`w-full rounded-md transition-all ${
                 isSelected("custom-solid")
-                  ? "bg-white shadow-md p-1"
-                  : "bg-white/50 shadow-sm hover:shadow-md hover:bg-white/70 p-1"
+? "bg-white dark:bg-accent shadow-md p-1"
+                : "bg-white/50 dark:bg-accent/50 shadow-sm hover:shadow-md hover:bg-white/70 dark:hover:bg-accent/70 p-1"
               }`}
             >
               <div
