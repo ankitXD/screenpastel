@@ -973,7 +973,7 @@ export default function ScreenshotEditor() {
               {renderCanvas(desktopCanvasRef)}
             </div>
 
-            <div className="absolute bottom-6 right-6 z-50 flex items-center gap-3 bg-background/80 backdrop-blur-md px-4 py-2 rounded-full border border-border/50 shadow-lg select-none">
+            <div className="absolute bottom-6 right-6 z-50 flex items-center gap-3 bg-background/80 dark:bg-accent/80 backdrop-blur-md px-4 py-2 rounded-full border border-border/50 shadow-lg select-none">
               <button
                 onClick={() => setCanvasZoom((z) => Math.max(0.1, z - 0.1))}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -1024,7 +1024,7 @@ export default function ScreenshotEditor() {
             {renderCanvas(mobileCanvasRef)}
           </div>
 
-          <div className="absolute top-4 right-4 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-border/50 shadow-lg select-none">
+          <div className="absolute top-4 right-4 z-50 flex items-center gap-2 bg-background/80 dark:bg-accent/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-border/50 shadow-lg select-none">
             <button
               onClick={() => setCanvasZoom((z) => Math.max(0.1, z - 0.1))}
               className="text-muted-foreground hover:text-foreground"
